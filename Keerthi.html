@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keerthi Reddy Portfolio</title>
+    <link rel="stylesheet" href="Keerthi.css">
+    <link rel="icon" href="Keerthi_Favicon.png" type="image/x-icon">
+    <script>
+
+        function home(){
+            let content =`<profile>
+            <div class="profile-pic">
+                <img src="Keerthi.jpg" alt="Profile Picture of Sai Keerthi Reddy Mora">
+            </div>
+            <h1>Sai Keerthi Reddy Mora</h1>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/keerthi-reddy-758584170/">LinkedIn</a>
+                <span>|</span>
+                <p>Ph: 405-510-5082</p>
+                <span>|</span>
+                <p>Email: <a href="mailto:saikeerthyreddy7@gmail.com">saikeerthyreddy7@gmail.com</a></p>
+                <span>|</span>
+                <a href="https://github.com/Keerthi-redddy">GitHub</a>
+            </div>
+        </profile>
+
+        <basicInfo>
+            <section class="about">
+                <h2>About Me</h2>
+                <p>Passionate about the dynamic interplay between data and insights, I am a seasoned data scientist 
+                    and skilled data engineer with a penchant for transforming raw data into strategic solutions. 
+                    Proficient in Python, R, SQL, and adept in data engineering technologies, I bring a versatile 
+                    toolkit to the table. My expertise extends across data analysis, machine learning, statistical  
+                    modeling, and the development of robust data pipelines. As a problem solver, I revel in unraveling 
+                    complex patterns that lead to real-world impact. Collaborating seamlessly with cross-functional 
+                    teams, I navigate the evolving landscape of data science and engineering with a commitment to 
+                    continuous learning and a passion for innovation. Let's connect and explore how we can harness 
+                    the power of data to drive meaningful and efficient solutions!</p>
+            </section>
+            <br>
+            
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, Java, SQL, C++, C, R, Scala, Pig</li>
+                    <li><strong>Database Management:</strong> CosmosDB, MSSQL, NoSQL, MySQL, Hive, Impala</li>
+                    <li><strong>Big Data & Data Engineering:</strong> Hadoop, Pyspark, MapReduce, Dremio, Apache NiFi, Ambari</li>
+                    <li><strong>Machine Learning & Data Science:</strong> Supervised Learning, Unsupervised Learning, Linear Classifiers, SVM, Decision Tree, Gradient Boosting Machines (GBM), XGBoost, Regression, Clustering, Dimensionality Reduction, Sentiment Analysis, DBSCAN, Deep Learning, NLP, Transformers, Named Entity Recognition, Keras</li>
+                    <li><strong>Cloud & DevOps:</strong> Azure, Google Cloud Platform (GCP), Cloud Computing, Jenkins, CI/CD</li>
+                    <li><strong>Data Analysis & Visualization:</strong> Power BI, Tableau, ETL, Data Analysis, Business Objects SAP, Microsoft Excel (Pivot Tables, Power Query, Macros)</li>
+                    <li><strong>Software Development & Tools:</strong> HTML, CSS, JavaScript, PHP, AJAX, Git, OOP, Agile, Waterfall</li>
+                    <li><strong>Process Automation:</strong> Python development for process automation, SQL Query Optimization, Informatica</li>
+                    <li><strong>Project Management:</strong> JIRA, MS Project, Design Thinking</li>
+                    <li><strong>Languages:</strong> English, Spanish</li>
+                </ul>
+            </section>
+        </basicInfo>`;
+            document.getElementById("container").innerHTML = content;
+        }
+        
+        function Projects(){
+            let content =`<section class="projects">
+            <h2>Projects</h2>
+                <div class ='project-box'><strong>Healthcare Premium Prediction: <a href='ml_premium_prediction.html'>Model Link</a> | <a href='ml_premium_prediction_rest.html'>specialized model Link</a></strong> 
+                    <ul>
+                        <li>Developed a Healthcare Premium Prediction model to forecast healthcare premiums based on key demographic (age, income) and health-related features 
+                            (medical history, conditions like diabetes, heart disease). The model used a risk score system to quantify how various health conditions impact 
+                            premium costs, enabling more accurate and personalized insurance pricing.</li>
+
+                        <li>Applied multiple machine learning models, including Linear Regression, Ridge Regression, and XGBoost, to analyze the data. The Linear Regression model achieved
+                             an R-squared value of 0.93, demonstrating good predictive accuracy for most individuals across the dataset.</li>
+
+                        <li>Developed a specialized model for individuals under 25 years old using XGBoost, which resulted in an exceptional R-squared value of 0.997. This tailored model 
+                            highlighted that younger individuals showed more extreme prediction errors, emphasizing the importance of segment-specific models for more accurate forecasting.</li>
+
+                        <li>The analysis revealed that a one-size-fits-all approach to premium prediction leads to inaccuracies, particularly for younger populations. The results underscored 
+                            the benefits of personalized models to optimize insurance pricing and improve risk management strategies, offering more accurate, data-driven insights for the insurance industry.</li>
+                        </ul>
+                    </div>
+                <div class ='project-box'><strong>Credit Risk Model: <a href='credit_risk_model.html'>Click Here to View</a></strong> 
+                    <ul>
+                        <li>In this project, I developed a Credit Risk Modeling system aimed at predicting the probability of loan defaults based on an individual’s financial history. 
+                    This is a critical application for financial institutions to evaluate the risk of lending and make data-driven decisions. The primary objective was to classify borrowers into risk categories (low, medium, and high)
+                     and identify key factors influencing the likelihood of default.</li>
+
+                    <li>To ensure the model's robustness, we used a range of machine learning techniques such as Logistic Regression, Random Forest, and XGBoost. The scope of the project involved performing a train-test split early in 
+                        the process to prevent data leakage and ensure unbiased results during exploratory data analysis (EDA) and feature engineering. The analysis leveraged historical credit data, including variables like income, loan
+                         type, and repayment history. We employed performance metrics like accuracy, precision, recall, AUC, and the Gini coefficient to evaluate the model’s effectiveness.</li>
+
+                    <li>During the model training process, multiple attempts were made to handle class imbalance using techniques like under-sampling and SMOTE Tomek, alongside hyperparameter tuning through Optuna. The model’s effectiveness
+                         was further assessed using the KS Statistic, AUC, and Gini coefficient. The results showed that the model was particularly effective in distinguishing between high-risk and low-risk borrowers, achieving an AUC of 0.98
+                          and a Gini coefficient of 0.96, which is indicative of nearly perfect predictive power.</li>
+
+                    <li>Additionally, insights gained from the analysis revealed that variables like loan tenure, delinquent months, total past due (DPD), and credit utilization are strong predictors of default risk. However, factors such as loan
+                         amount and income did not show strong predictive power individually but may be better understood through the loan-to-income ratio (LTI), an area explored further during the analysis. Ultimately, the model’s high performance,
+                          especially in the top deciles, illustrates its potential for real-world application in credit risk assessment, providing financial institutions with valuable insights to minimize loan default risk.</li>
+                          </ul>
+                    </div>
+                    <div class ='project-box'><strong>Business 360 - Brick & mortar and E-commerce: <a href='https://app.powerbi.com/view?r=eyJrIjoiYzIwYzU4MGYtYzliZS00MjIwLTk5ODUtY2QwM2ViZWZhZWQxIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9'>View Report</a></strong>
+                        <ul>
+                            <li>In this project, I designed a comprehensive multi-view dashboard in Power BI for AtliQ Hardware, focusing on six key departments: sales, finance, supply chain, executive, marketing, and products. The goal was to
+                                 provide valuable insights into sales trends and business operations to help facilitate data-driven decision-making, with the aim of scaling business processes by 10%.</li>
+
+                            <li>I integrated two different data sources—MySQL and Excel—containing over 1 million records, and performed data modeling to ensure seamless integration and accurate reporting. The dashboard was designed to present
+                                 the most relevant KPIs and metrics for each department, offering real-time insights into performance, inventory management, financial trends, and customer behavior.</li>
+
+                            <li>To optimize the performance of the report, I utilized DAX Studio to fine-tune the calculations and improve query performance. This optimization effort resulted in a 30% reduction in storage usage and a 10% 
+                                improvement in report load times, enhancing the overall efficiency and user experience of the dashboard.</li>
+
+                            <li>This project demonstrates my ability to work with large datasets, build interactive and user-friendly dashboards, and implement performance improvements that directly impact business outcomes.</li>
+                            </ul>
+                        </div>
+        </section>`;
+            document.getElementById("container").innerHTML = content;
+        }
+
+        function Experience(){
+            let content =`<section class="experience">
+            <h2>Experience</h2>
+            <div class='experience-box'>
+            <div class='experience-company'>
+            <img src="OU.png" alt="University Of Oklahoma Symbol">
+            <h3>Graduate Research Assistant - University of Oklahoma | (05/2023 - Current)</h3>
+            </div>
+            <ul>
+                <li>Implemented diverse machine learning models, such as RNNs, SVMs, and deep learning architectures, to enhance EEG data classification.</li>
+                <li>Developed a novel RNN-based model, achieving a 15% improvement in accuracy for seizure prediction in EEG data.</li>
+                <li>Engineered and deployed an SVM classifier for EEG signal categorization, reducing false positives by 20%.</li>
+                <li>Achieved a 91% accuracy rate in EEG data classification, demonstrating expertise in advanced machine learning techniques.</li>
+            </ul>
+            </div>
+
+            <div class='experience-box'>
+            <div class='experience-company'>
+            <img src="NCR.jpg" alt="NCR Symbol">
+            <h3>Data Engineer - NCR Corporation | (02/2021 - 06/2021)</h3>
+            </div>
+            <ul>
+                <li>Led the design and development of enterprise-level predictive analytics pipelines, driving $35.3 million in revenue annually.</li>
+                <li>Developed Hadoop-based predictive analytics jobs, increasing revenue forecasting accuracy by 15%.</li>
+                <li>Integrated data from multiple sources using Informatica and NiFi, reducing data integration time by 30%.</li>
+                <li>Achieved a 50% reduction in data transfer times through seamless on-premises and cloud data integration.</li>
+            </ul>
+            </div>
+            <div class='experience-box'>
+            <div class='experience-company'>
+            <img src="NCR.jpg" alt="NCR Symbol">
+            <h3>IT Analyst (Intern) - NCR Corporation | (02/2021 - 06/2021)</h3>
+            </div>
+            <ul>
+                <li>Managed user incidents related to data discrepancies and implemented Hive query enhancements, reducing recurring incidents by 33%.</li>
+                <li>Optimized SQL queries, reducing data extraction time by 40% and improving data processing efficiency by 30%.</li>
+                <li>Automated Linux email notifications with a Python script, reducing manual communication efforts by 95%.</li>
+            </ul>
+            </div>
+        </section>`;
+            document.getElementById("container").innerHTML = content;
+        }
+
+        function Education(){
+            let content =` <section class="education">
+            <h2>Education</h2>
+            <h3>Master of Science - University of Oklahoma, Norman, OK, USA</h3>
+            <p>01/2023 - 12/2024</p>
+            <p>Major in Data Science and Analytics</p>
+        </section>`;
+            document.getElementById("container").innerHTML = content;
+        }
+
+        function Others(){
+            let content =` <section class="others">
+            <h2>Certifications & Achievements</h2>
+            <ul>
+                <li>Certified Generative AI with Large Language Models(LLMs) | <a href='https://coursera.org/share/a7963e26a2033ce7be27b4d40fa03ad4'>View Certificate</a></li>
+                <li>Code Basics Certified Power BI Developer. | <a href='https://codebasics.io/certificate/image/CB-49-465070'>View Certificate</a></li>
+                <li>Microsoft Certified: Azure Fundamentals (AZ-900) | <a href='https://www.credly.com/badges/18de3893-853e-4315-bacd-1b3eaa70d43e/public_url'>View Badge</a></li>
+                <li>Microsoft Certified: Azure Data Fundamentals (DP-900) | <a href='https://www.credly.com/badges/81622118-d14e-4123-af17-65a7dfb4b115/public_url'>View Badge</a></li>
+                <li>Great Learning Certification of Tableau Visulization | <a href='https://www.mygreatlearning.com/certificate/MXNMAASV'>View Certificate</a></li>
+                <li>Great Learning R Course Completion certificate | <a href='https://www.mygreatlearning.com/certificate/HYYOYMBF'>View Certificate</a></li>
+                <li>1st position in a Kaggle Competition, accurately predicting revenue with advanced data analysis skills. | <a href='https://www.kaggle.com/work/competitions'>View Here</a></li>
+            </ul>
+        </section>`;
+            document.getElementById("container").innerHTML = content;
+        }
+    </script>
+</head>
+<body>
+    <homebar>
+        <button onclick="home();" autofocus>Profile</button>
+        <button onclick="Projects();">Projects</button>
+        <button onclick="Experience();">Experience</button>
+        <button onclick="Education();">Education</button>
+        <button onclick="Others();">Certifications & Achievements</button>
+    </homebar>
+    
+    <div class="container" id="container">
+        <profile>
+            <div class="profile-pic">
+                <img src="Keerthi.jpg" alt="Profile Picture of Sai Keerthi Reddy Mora">
+            </div>
+            <h1>Sai Keerthi Reddy Mora</h1>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/keerthi-reddy-758584170/">LinkedIn</a>
+                <span>|</span>
+                <p>Ph: 405-510-5082</p>
+                <span>|</span>
+                <p>Email: <a href="mailto:saikeerthyreddy7@gmail.com">saikeerthyreddy7@gmail.com</a></p>
+                <span>|</span>
+                <a href="https://github.com/Keerthi-redddy">GitHub</a>
+            </div>
+        </profile>
+
+        <basicInfo>
+            <section class="about">
+                <h2>About Me</h2>
+                <p>Passionate about the dynamic interplay between data and insights, I am a seasoned data scientist 
+                    and skilled data engineer with a penchant for transforming raw data into strategic solutions. 
+                    Proficient in Python, R, SQL, and adept in data engineering technologies, I bring a versatile 
+                    toolkit to the table. My expertise extends across data analysis, machine learning, statistical  
+                    modeling, and the development of robust data pipelines. As a problem solver, I revel in unraveling 
+                    complex patterns that lead to real-world impact. Collaborating seamlessly with cross-functional 
+                    teams, I navigate the evolving landscape of data science and engineering with a commitment to 
+                    continuous learning and a passion for innovation. Let's connect and explore how we can harness 
+                    the power of data to drive meaningful and efficient solutions!</p>
+            </section>
+            <br>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, Java, SQL, C++, C, R, Scala, Pig</li>
+                    <li><strong>Database Management:</strong> CosmosDB, MSSQL, NoSQL, MySQL, Hive, Impala</li>
+                    <li><strong>Big Data & Data Engineering:</strong> Hadoop, Pyspark, MapReduce, Dremio, Apache NiFi, Ambari</li>
+                    <li><strong>Machine Learning & Data Science:</strong> Supervised Learning, Unsupervised Learning, Linear Classifiers, SVM, Decision Tree, Gradient Boosting Machines (GBM), XGBoost, Regression, Clustering, Dimensionality Reduction, Sentiment Analysis, DBSCAN, Deep Learning, NLP, Transformers, Named Entity Recognition, Keras</li>
+                    <li><strong>Cloud & DevOps:</strong> Azure, Google Cloud Platform (GCP), Cloud Computing, Jenkins, CI/CD</li>
+                    <li><strong>Data Analysis & Visualization:</strong> Power BI, Tableau, ETL, Data Analysis, Business Objects SAP, Microsoft Excel (Pivot Tables, Power Query, Macros)</li>
+                    <li><strong>Software Development & Tools:</strong> HTML, CSS, JavaScript, PHP, AJAX, Git, OOP, Agile, Waterfall</li>
+                    <li><strong>Process Automation:</strong> Python development for process automation, SQL Query Optimization, Informatica</li>
+                    <li><strong>Project Management:</strong> JIRA, MS Project, Design Thinking</li>
+                    <li><strong>Languages:</strong> English, Spanish</li>
+                </ul>
+            </section>
+
+            
+        </basicInfo>
+    </div>
+</body>
+</html>
